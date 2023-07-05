@@ -66,22 +66,41 @@ const App = () => {
 
   useEffect(() => {
     const string = JSON.stringify(Data);
+    console.log('string length:', string.length);
+    console.log('data length:', Data.length);
+
     setTimeout(() => {
-      console.log('^^^^^^^^^^^^^^^RtnTurboHelper^^^^^^^^^^^^^^^');
+      console.log('^^^^^^^^^^^^^^^RtnTurboHelper string^^^^^^^^^^^^^^^');
       const timeA = Date.now();
       RtnTurboHelper.transmitString(string).then(res => {
         console.log(Date.now() - timeA);
-        console.log('^^^^^^^^^^^^^^^RtnTurboHelper^^^^^^^^^^^^^^^');
+        console.log('^^^^^^^^^^^^^^^RtnTurboHelper string^^^^^^^^^^^^^^^');
       });
     }, 1000);
     setTimeout(() => {
-      console.log('^^^^^^^^^^^^^^^NativeModules^^^^^^^^^^^^^^^');
+      console.log('^^^^^^^^^^^^^^^NativeModules string^^^^^^^^^^^^^^^');
       const timeB = Date.now();
       NativeModules.EdisonRCTBridge?.transmitString(string).then(res => {
         console.log(Date.now() - timeB);
-        console.log('^^^^^^^^^^^^^^^NativeModules^^^^^^^^^^^^^^^');
+        console.log('^^^^^^^^^^^^^^^NativeModules string^^^^^^^^^^^^^^^');
       });
     }, 2000);
+    setTimeout(() => {
+      console.log('^^^^^^^^^^^^^^^RtnTurboHelper json^^^^^^^^^^^^^^^');
+      const timeA = Date.now();
+      RtnTurboHelper.transmitJSON(Data).then(res => {
+        console.log(Date.now() - timeA);
+        console.log('^^^^^^^^^^^^^^^RtnTurboHelper json^^^^^^^^^^^^^^^');
+      });
+    }, 4000);
+    setTimeout(() => {
+      console.log('^^^^^^^^^^^^^^^NativeModules json^^^^^^^^^^^^^^^');
+      const timeB = Date.now();
+      NativeModules.EdisonRCTBridge?.transmitJSON(Data).then(res => {
+        console.log(Date.now() - timeB);
+        console.log('^^^^^^^^^^^^^^^NativeModules json^^^^^^^^^^^^^^^');
+      });
+    }, 6000);
   }, []);
 
   return (
