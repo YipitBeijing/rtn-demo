@@ -26,7 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import RTNHelper from 'rtn-edison-helper/src/NativeHelper';
+import RtnTurboHelper from 'rtn-turbo-modules-helper/src/NativeHelper';
 import {Data} from './data';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
@@ -67,11 +67,11 @@ const App = () => {
   useEffect(() => {
     const string = JSON.stringify(Data);
     setTimeout(() => {
-      console.log('^^^^^^^^^^^^^^^RTNHelper^^^^^^^^^^^^^^^');
+      console.log('^^^^^^^^^^^^^^^RtnTurboHelper^^^^^^^^^^^^^^^');
       const timeA = Date.now();
-      RTNHelper.transmitString(string).then(res => {
+      RtnTurboHelper.transmitString(string).then(res => {
         console.log(Date.now() - timeA);
-        console.log('^^^^^^^^^^^^^^^RTNHelper^^^^^^^^^^^^^^^');
+        console.log('^^^^^^^^^^^^^^^RtnTurboHelper^^^^^^^^^^^^^^^');
       });
     }, 1000);
     setTimeout(() => {

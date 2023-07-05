@@ -697,7 +697,7 @@ PODS:
     - React-jsi (= 0.70.10)
     - React-logger (= 0.70.10)
     - React-perflogger (= 0.70.10)
-  - rtn-edison-helper (0.0.1):
+  - rtn-turbo-modules-helper (0.0.1):
     - RCT-Folly (= 2021.07.22.00)
     - RCTRequired
     - RCTTypeSafety
@@ -774,7 +774,7 @@ DEPENDENCIES:
   - React-rncore (from `../node_modules/react-native/ReactCommon`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - rtn-edison-helper (from `../node_modules/rtn-edison-helper`)
+  - rtn-turbo-modules-helper (from `../node_modules/rtn-turbo-modules-helper`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -870,8 +870,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
-  rtn-edison-helper:
-    :path: "../node_modules/rtn-edison-helper"
+  rtn-turbo-modules-helper:
+    :path: "../node_modules/rtn-turbo-modules-helper"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -926,7 +926,7 @@ SPEC CHECKSUMS:
   React-rncore: 7c2cf1152d11ab327ec906bfd2060fa339698dbe
   React-runtimeexecutor: 77aa3714a353cfb1a5f5e315e8af5154cd3d9402
   ReactCommon: a29dac86d7219579db079cef8f380ebffe1ba545
-  rtn-edison-helper: 26d68417deda289681ce176267ebcec741244610
+  rtn-turbo-modules-helper: ee7483ecff97872db1ea391061ee3c6b7c3e9f86
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 0518155cfbcc68c56223422f6a20a71b82e307d2
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
