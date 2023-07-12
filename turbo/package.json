@@ -1,0 +1,44 @@
+{
+  "name": "rtn-turbo-modules-helper",
+  "version": "0.0.1",
+  "description": "turbo modules helper for edison react native",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "android",
+    "ios",
+    "rtn-turbo-modules-helper.podspec",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "author": "Near",
+  "repository": "https://github.com/YipitBeijing/rtn-edison-helper",
+  "homepage": "https://github.com/YipitBeijing/rtn-edison-helper.git",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.10",
+    "@types/react-native": "0.70.0"
+  },
+  "peerDependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.10"
+  },
+  "codegenConfig": {
+    "name": "RtnTurboModulesHelperSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.rtnturbomoduleshelper"
+    }
+  }
+}
