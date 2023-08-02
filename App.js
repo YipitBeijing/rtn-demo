@@ -38,11 +38,18 @@ const App = () => {
         title="NativeModules string"
         onPress={() => {
           const string = JSON.stringify(Data);
-          console.log('^^^^^^^^^^^^^^^ NativeModules string ^^^^^^^^^^^^^^^');
-          const timeB = Date.now();
+          console.log(
+            '^^^^^^^^^^^^^^^^^ NativeModules string ^^^^^^^^^^^^^^^^^',
+          );
+          const time = Date.now();
           NativeModules.EdisonRCTBridge?.transmitString(string).then(res => {
-            console.log(Date.now() - timeB);
-            console.log('^^^^^^^^^^^^^^^ NativeModules string ^^^^^^^^^^^^^^^');
+            const passTime = Date.now() - time;
+            console.log(
+              `---> transmit data to native and receive response for ${passTime}ms`,
+            );
+            console.log(
+              '^^^^^^^^^^^^^^^^^ NativeModules string ^^^^^^^^^^^^^^^^^',
+            );
           });
         }}
       />
@@ -53,9 +60,12 @@ const App = () => {
           console.log(
             '^^^^^^^^^^^^^^^ TurboNativeModules string ^^^^^^^^^^^^^^^',
           );
-          const timeA = Date.now();
+          const time = Date.now();
           RtnTurboHelper.transmitString(string).then(res => {
-            console.log(Date.now() - timeA);
+            const passTime = Date.now() - time;
+            console.log(
+              `---> transmit data to native and receive response for ${passTime}ms`,
+            );
             console.log(
               '^^^^^^^^^^^^^^^ TurboNativeModules string ^^^^^^^^^^^^^^^',
             );
@@ -66,9 +76,12 @@ const App = () => {
         title="NativeModules json"
         onPress={() => {
           console.log('^^^^^^^^^^^^^^^ NativeModules json ^^^^^^^^^^^^^^^');
-          const timeB = Date.now();
+          const time = Date.now();
           NativeModules.EdisonRCTBridge?.transmitJSON(Data).then(res => {
-            console.log(Date.now() - timeB);
+            const passTime = Date.now() - time;
+            console.log(
+              `---> transmit data to native and receive response for ${passTime}ms`,
+            );
             console.log('^^^^^^^^^^^^^^^ NativeModules json ^^^^^^^^^^^^^^^');
           });
         }}
@@ -79,9 +92,12 @@ const App = () => {
           console.log(
             '^^^^^^^^^^^^^^^ TurboNativeModules json ^^^^^^^^^^^^^^^',
           );
-          const timeA = Date.now();
+          const time = Date.now();
           RtnTurboHelper.transmitJSON(Data).then(res => {
-            console.log(Date.now() - timeA);
+            const passTime = Date.now() - time;
+            console.log(
+              `---> transmit data to native and receive response for ${passTime}ms`,
+            );
             console.log(
               '^^^^^^^^^^^^^^^ TurboNativeModules json ^^^^^^^^^^^^^^^',
             );
